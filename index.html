@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Electrochemisty</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: "Poppins", sans-serif
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .w3-half img {
+        margin-bottom: -6px;
+        margin-top: 16px;
+        opacity: 0.8;
+        cursor: pointer
+    }
+
+    .w3-half img:hover {
+        opacity: 1
+    }
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+
+<link rel="stylesheet" href="/styles.css">
+
+<body>
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding"
+        style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
+            style="width:100%;font-size:22px">Close Menu</a>
+        <div class="w3-container">
+            <h3 class="w3-padding-64"><b>Electrochemisty In<br>Exercising</b></h3>
+        </div>
+        <div class="w3-bar-block">
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+            <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Showcase</a>
+            <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Redox Reactions</a>
+            <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Redox In Our Body</a>
+            <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Electron Transport
+                Chain</a>
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Nerve Signals</a>
+            <a href="#Documentation" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Documentation and
+                Links</a>
+        </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+        <span>Electrochemsity In Exercising</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+        <!-- Header -->
+        <div class="w3-container" style="margin-top:80px" id="showcase">
+            <h1 class="w3-jumbo"><b>The Human Is An Electrochemical Machine</b></h1>
+            <h1 class="w3-xxxlarge w3-text-red"><b>Showcase.</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+        </div>
+
+        <!-- Photo grid (modal) -->
+        <div class="w3-row-padding">
+            <div class="w3-half">
+                <img src="/Images/960x0.jpg" style="width:100%" onclick="onClick(this)" alt="">
+            </div>
+
+            <div class="w3-half">
+                <img src="/Images/electron.jpg" style="width:100%" onclick="onClick(this)" alt="">
+            </div>
+        </div>
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption"></p>
+            </div>
+        </div>
+
+        <!-- Services -->
+        <div class="w3-container" id="services" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>Redox Reactions.</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <h2>What are redox reactions, and what do they mean?</h2>
+            <p style="font-size: 1.5rem;"> Redox reactions are reactions that involve both oxidation, and reduction.
+                Reduction is the
+                process where something must gain electrons to be reduced. Whereas Oxidation is where something
+                must lose electrons in order to become oxidized.
+            </p>
+        </div>
+
+        <!-- Designers -->
+        <div class="w3-container" id="designers" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>Redox Reactions In Our Body.</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <h2>Our body is an electrochemical machine and goes through many redox reactions to derive energy</h2>
+            <p style="font-size: 1.5rem;">During exersice human bodies need energy, and to get this energy the body is
+                always going through
+                redox reactions. The constant process of these redox reactions occurs in cellular respiration, this
+                process
+                involves the breakdown of glucose and production of ATP for our bodies to use.
+            </p>
+            <p><b>The redox reactions during glycolysis</b>:</p>
+        </div>
+
+        <!-- The Team -->
+        <div class="w3-row-padding w3-grayscale">
+            <div class="w3-col m4 w3-margin-bottom">
+                <div class="w3-light-grey">
+                    <img src="/Images/Screenshot 2021-12-22 120653.png" alt="John" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Oxidation of NAD+</h3>
+
+                        <p>NAD+ gains 2 electrons and 2 H+ ions in order
+                            to produce NADH and H+ ions. NAD+ is an oxidizing agent,
+                            meaning it can accept electrons
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col m4 w3-margin-bottom">
+                <div class="w3-light-grey">
+                    <img src="/Images/FAD.png" alt="Jane" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Oxidation Of FAD</h3>
+                        <p>FAD gains 2 electrons and 2 H+ ions in order to
+                            produce FADH2.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col m4 w3-margin-bottom">
+                <div class="w3-light-grey">
+                    <img src="/Images/NADH and FADh.jpg" alt="Mike" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Why need NADH and FADH2</h3>
+
+                        <p>These 2 molecules are used in the Electron Transport Chain (ETC).
+                            They can carry many electrons which are then put through many redox
+                            reactions. Essentially NADH and FADH2 are carriages that bring over electrons
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Packages / Pricing Tables -->
+        <div class="w3-container" id="packages" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>Electron Transport Chain.</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <p style="font-size: 1.5rem;">The Electron transport Chain is a collection of proteins within a
+                mitochondrial.
+                The electrons given from NADH and FADH2 pass through the membrane of the mitochondrial, and
+                will go through a series of redox reactions.
+            </p>
+        </div>
+        <div class="row">
+            <div class="card center" style="width: 40rem;">
+                <img class="card-img-top" src="/Images/ETC2.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Information</h5>
+                    <p class="card-text">The electron transport chain has a total of 4 processes
+                        where the electron must go through. However the end result is to produce water,
+                        by reducing oxygen. The electrons go through these many redox reactions because
+                        the cells need to capture the energy at a slower pace, and the redox reactions help
+                        slow down the rate at which energy is being released.
+                    </p>
+                </div>
+            </div>
+            <div class="card center" style="width: 40rem;">
+                <img class="card-img-top" src="/Images/Funny.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Information</h5>
+                    <p class="card-text">NADH and FADH2 both will deposit their electrons into the
+                        electron transport chain at I and II, respectivley. These electrons are high energy,
+                        and once they deposit these electrons they turn back into NAD+ and FAD and both will release
+                        2H+ ions. These 2 carriers will go back and do their oxidation processes again to repeat the
+                        cycle.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact -->
+
+        <section id="testimonials">
+            <div class="w3-container" id="contact" style="margin-top:75px">
+                <h1 class="w3-xxxlarge w3-text-red"><b>Nerve Signals.</b></h1>
+                <hr style="width:50px;border:5px solid red" class="w3-round">
+                <p style="font-size: 1.5rem;">Muscles contract and retract through signals that are produced by our
+                    nerves
+                </p>
+                <div id="testimonials-carousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active container-fluid">
+                            <h2 class="testimonial-text">Neurons</h2>
+                            <img class="testimonial-img" src="/Images/nerve.gif" alt="car-iamge">
+                            <p style="font-size: 1.6rem;" style="font-weight: 500;">To move our bodies neurons send
+                                electrochemical signals to
+                                tissues.
+                                These tissues receive the signal and perform an action. Ultimatley the result
+                                is the contraction, and relaxation of the muscle fiber
+                            </p>
+                        </div>
+                        <div class="carousel-item container-fluid">
+                            <h2 class="testimonial-text">Electrochemical Signals</h2>
+                            <img class="testimonial-img" src="/Images/muscle-contractions.jpg" alt="lady-profile">
+                            <p style="font-size: 1.6rem;" style="font-weight: 500;">Muscle cells have something called,
+                                action potential, which triggers a sequence of actions that result in contraction, and
+                                relaxation
+                                of the muscle. Once neurons are stimulated they send these signals, and these signals
+                                convey information
+                                between neurons.
+                            </p>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#testimonials-carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#testimonials-carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+                <!-- End page content -->
+            </div>
+        </section>
+
+        <!-- W3.CSS Container -->
+        <section id="Documentation">
+            <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
+                <p class="w3-right">Powered by <a href="https://github.com/JimmyChavada" title="W3.CSS" target="_blank"
+                        class="w3-hover-opacity">Jimmy Chavada</a></p>
+
+                <a href="https://docs.google.com/document/d/1b81r82da2ZlfxQoON8SrIulXmW4qrUN6X1rex6IoYAY/edit?usp=sharing"
+                    target="_blank">
+                    <button type="button" class="btn btn-dark">Documentation</button></a>
+            </div>
+        </section>
+
+        <script>
+            // Script to open and close sidebar
+            function w3_open() {
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("myOverlay").style.display = "block";
+            }
+
+            function w3_close() {
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("myOverlay").style.display = "none";
+            }
+
+            // Modal Image Gallery
+            function onClick(element) {
+                document.getElementById("img01").src = element.src;
+                document.getElementById("modal01").style.display = "block";
+                var captionText = document.getElementById("caption");
+                captionText.innerHTML = element.alt;
+            }
+        </script>
+
+</body>
+
+</html>
